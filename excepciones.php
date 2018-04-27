@@ -1,5 +1,8 @@
 <?php
+require_once('funciones/funcionesValidacion.php');
 
+$a = Excepcion::verExcep();
+print_r($a);
 
  ?>
 

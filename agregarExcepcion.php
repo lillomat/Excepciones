@@ -1,3 +1,15 @@
+<?php
+require_once('funciones/funcionesValidacion.php');
+
+$a = Excepcion::verExcep();
+
+foreach ($a as  $value) {
+print_r($a);
+}
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,22 +114,22 @@ body{
   </head>
   <body>
     <div class="container-fluid" align="center" style="margin-top:140px;">
-      <div class="row well" style="width: 600px; height: 130px; padding-top:0px; padding-bottom:0px;">
+      <div class="row well" style="width: 600px; height: 120px; padding-top:0px; padding-bottom:0px;">
           <div class="well" align="left" style=" height: 0px; margin-left:-20px; margin-right:-20px;">
             <img src="imagenes/minilogo.png" class="img" style="margin-top:-20px">
 
-           <small><label class="Titulo" style="">Menú Principal</label></small>
+           <small><label class="Titulo" style="">Excepción</label></small>
           </div>
       <div class="row well-2" style="margin-top:-20px; margin-left:-20px; margin-right:-20px; height:240px;">
 
 <div class="col-sm-6" style="padding:20px">
   Observación.
-    
+
     <textarea class="form-control" style="width: 250px; right: 100px; height: 132px;"></textarea>
 
-    
+
 </div>
-   
+
 
 <div class="col-sm-6" style="padding:20px;">
 
@@ -126,20 +138,23 @@ body{
 
      Excepción.
 <select class="form-control" style="width: 250px; right: 100px; height: auto;">
-  <option value="volvo">DESCUENTO CUOTAS A PAGAR.</option>
+  <option value="<?php echo $a['id_tipo_exc']; ?>"><?php echo $a['descripcion_exc'] ?></option>
   <option value="saab">DESCUENTO CUOTAS A PAGAR.</option>
   <option value="mercedes">DESCUENTO CUOTAS A PAGAR.</option>
   <option value="audi">DESCUENTO CUOTAS A PAGAR.</option>
 </select>
- 
+
  <br>
   <button class="form-control btn btn-success" name="Agregar" style="width: 250px; margin-left: : 100px;">Guardar Excepción</button>
+</div>
+<br>
+<br>
+
+<button type="submit" onclick="window.location='./indexVendedor.php'" class="btn btn-default btn-xl" style="width: 90px; margin-left: 460px; height: 30px;">Volver <i class="glyphicon glyphicon-share-alt"></i></button>
+
 
 </div>
-     
 
-      </div>
-      
   </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
