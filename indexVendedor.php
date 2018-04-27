@@ -118,13 +118,13 @@ body{
           <div class="well" align="left" style=" height: 0px; margin-left:-20px; margin-right:-20px;">
             <img src="imagenes/minilogo.png" class="img" style="margin-top:-20px">
 
-           <small><label class="Titulo" style="">Menú Principal asdasd</label></small>
+           <small><label class="Titulo" style="">Menú Principal</label></small>
           </div>
       <div class="row well-2" style="margin-top:-20px; margin-left:-20px; margin-right:-20px; height:auto;">
 <div class="col-sm-12" style="padding:20px">
   <button type="submit" style="" onclick="window.location='./agregarExcepcion.php'" class="btn btn-success btn-lg btn-block">Añadir Excepción</button>
   <br>
-  <button type="submit" onclick="window.location='./bandejaVendedor.php'" class="btn btn-success btn-lg btn-block">Gestionar Excepciones </button>
+  <button type="submit" onclick="window.location='./bandejaVendedor.php'" class="btn btn-success btn-lg btn-block">Gestionar Excepciones</button>
 
 </div>
       </div>
