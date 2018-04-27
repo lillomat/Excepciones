@@ -100,7 +100,6 @@ body{
 </style>
 
   </head>
-  kjdsfldsjfSDKFHKDSHFDKSH
   <body>
     <div class="container-fluid" align="center" style="margin-top:140px">
       <div class="row well" style="width: 600px; height: 130px; padding-top:0px; padding-bottom:0px;">
@@ -111,9 +110,7 @@ body{
           </div>
       <div class="row well-2" style="margin-top:-20px; margin-left:-20px; margin-right:-20px; height:auto;">
 <div class="col-sm-12" style="padding:20px">
-  <button type="submit" style="" onclick="window.location='./ResumenSupervisor.php?supervisor=1'" class="btn btn-success btn-lg btn-block">Añadir Excepciónadasd</button>
-  <br>
-  <button type="submit" onclick="window.location='./resumenAsesor.php?asesor=1'" class="btn btn-success btn-lg btn-block">Gestionar Excepciones</button>
+  <button type="submit" onclick="window.location='./bandejaSupervisor.php'" class="btn btn-success btn-lg btn-block">Gestionar Excepciones</button>
 
 </div>
       </div>
