@@ -1,3 +1,15 @@
+<?php
+
+$para = 'marcelonunezji@gmail.com';
+$titulo = 'hola';
+$mensaje = 'chao';
+$cabeceras = 'nos vemos';
+$envio = mail($para, $título, $mensaje, $cabeceras);
+
+echo "<pre>";
+print_r($envio);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
