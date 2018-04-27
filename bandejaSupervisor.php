@@ -244,7 +244,7 @@ body {
     							<table class="table table-filter">
     								<tbody>
                       <!--  Aqui empieza lo replicable -->
-    									<tr data-status="aceptado">
+    									<tr data-status="aceptado" data-value='111111'>
     										<td>
     											<div class="ckbox">
     												<input type="checkbox" id="checkbox1">
@@ -273,7 +273,7 @@ body {
     										</td>
     									</tr>
                       <!-- Aqui termina lo replicable -->
-    									<tr data-status="pendiente">
+    									<tr data-status="pendiente" data-value="2222222">
     										<td>
     											<div class="ckbox">
     												<input type="checkbox" id="checkbox3">
@@ -301,7 +301,7 @@ body {
     											</div>
     										</td>
     									</tr>
-    									<tr data-status="rechazado">
+    									<tr data-status="rechazado" data-value='333333'>
     										<td>
     											<div class="ckbox">
     												<input type="checkbox" id="checkbox2">
@@ -329,7 +329,7 @@ body {
     											</div>
     										</td>
     									</tr>
-    									<tr data-status="aceptado" class="selected">
+    									<tr data-status="aceptado" class="selected" data-value='444444'>
     										<td>
     											<div class="ckbox">
     												<input type="checkbox" id="checkbox4" checked>
@@ -357,7 +357,7 @@ body {
     											</div>
     										</td>
     									</tr>
-    									<tr data-status="pendiente">
+    									<tr data-status="pendiente" data-value="55555">
     										<td>
     											<div class="ckbox">
     												<input type="checkbox" id="checkbox5">
@@ -405,8 +405,9 @@ body {
     $('.ckbox label').on('click', function () {
 
     });
-$('.table-filter tr').on('click', function () {
-  window.location = './detalleVendedor.php?rut=222222';
+$('tr').on('click', function () {
+  var rut = $(this).data('value');
+  window.location = './detalleVendedor.php?rut='+rut;
 });
     $('.btn-filter').on('click', function () {
       var $target = $(this).data('target');
