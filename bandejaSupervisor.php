@@ -74,14 +74,6 @@ body{
 .ctn {
   border-radius: 10px;
 }
-.btn-success{
-  background-color:rgb(150,191,12);
-  border-color: rgb(150,191,12);
-}
-.btn-danger{
-  background-color:rgb(201,80,107);
-  border-color: rgb(201,80,107);
-}
 /*    --------------------------------------------------
 	:: General
 	-------------------------------------------------- */
@@ -166,13 +158,13 @@ body {
 	background-color: #2BBCDE;
 }
 .ckbox input[type="checkbox"]:checked + label:after {
-	top: 3px;
-	left: 3.5px;
-	content: '\e013';
-	color: #fff;
-	font-size: 11px;
-	font-family: 'Glyphicons Halflings';
-	position: absolute;
+    top: 3px;
+  	left: 3.5px;
+  	content: '\e014';/*\e013 -- checked*/
+  	color: #fff;
+  	font-size: 11px;
+  	font-family: 'Glyphicons Halflings';
+  	position: absolute;
 }
 .table-filter .star {
 	color: #ccc;
@@ -221,6 +213,14 @@ body {
 .table-filter .media .summary {
 	font-size: 14px;
 }
+.btn-success{
+
+
+}
+.btn-danger{
+
+
+}
 </style>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -234,9 +234,9 @@ body {
     					<div class="panel-body">
     						<div class="pull-right">
     							<div class="btn-group">
-    								<button type="button" class="btn btn-success btn-filter" data-target="aceptado">Aceptado</button>
+    								<button type="button" class="btn btn-success btn-filter" style="background-color:rgb(150,191,12);border-color: rgb(150,191,12);" data-target="aceptado">Aceptado</button>
     								<button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
-    								<button type="button" class="btn btn-danger btn-filter" data-target="rechazado">Rechazado</button>
+    								<button type="button" class="btn btn-danger btn-filter" style="border-color: rgb(201,80,107);background-color:rgb(201,80,107);" data-target="rechazado">Rechazado</button>
     								<button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
     							</div>
     						</div>
@@ -259,7 +259,7 @@ body {
     										<td>
     											<div class="media">
     												<a href="#" class="pull-left">
-    													<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+    													<img style="border-radius:50%" src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
     												</a>
     												<div class="media-body">
     													<span class="media-meta pull-right">Febrero 13, 2016</span>
@@ -322,7 +322,7 @@ body {
     													<span class="media-meta pull-right">Febrero 13, 2016</span>
     													<h4 class="title">
     														Lorem Impsum
-    														<span class="pull-right rechazado">(Cancelado)</span>
+    														<span class="pull-right rechazado">(Rechazado)</span>
     													</h4>
     													<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
     												</div>
@@ -350,7 +350,7 @@ body {
     													<span class="media-meta pull-right">Febrero 13, 2016</span>
     													<h4 class="title">
     														Lorem Impsum
-    														<span class="pull-right aceptado">(Pagado)</span>
+    														<span class="pull-right aceptado">(Aceptado)</span>
     													</h4>
     													<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
     												</div>
@@ -403,9 +403,11 @@ body {
     });
 
     $('.ckbox label').on('click', function () {
-      $(this).parents('tr').toggleClass('selected');
-    });
 
+    });
+$('.table-filter tr').on('click', function () {
+  window.location = './detalleVendedor.php?rut=222222';
+});
     $('.btn-filter').on('click', function () {
       var $target = $(this).data('target');
       if ($target != 'all') {
