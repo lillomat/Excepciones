@@ -110,7 +110,7 @@ body{
           </div>
       <div class="row well-2" style="margin-top:-20px; margin-left:-20px; margin-right:-20px; height:auto;">
 <div class="col-sm-12" style="padding:20px">
-  <button type="submit" style="" onclick="window.location='./ResumenSupervisor.php?supervisor=1'" class="btn btn-success btn-lg btn-block">Añadir Excepción</button>
+  <button type="submit" style="" onclick="window.location='./ResumenSupervisor.php?supervisor=1'" class="btn btn-success btn-lg btn-block">Añadir Excepciónadasd</button>
   <br>
   <button type="submit" onclick="window.location='./resumenAsesor.php?asesor=1'" class="btn btn-success btn-lg btn-block">Gestionar Excepciones</button>
 
