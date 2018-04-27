@@ -1,0 +1,2 @@
+# Excepciones
+Excepciones Sendero
