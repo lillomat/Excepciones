@@ -111,7 +111,17 @@ body{
       <div class="row well-2" style="margin-top:-20px; margin-left:-20px; margin-right:-20px; height:240px;">
 
 <div class="col-sm-6" style="padding:20px">
-   Ingresar rut.
+  Observación.
+    
+    <textarea class="form-control" style="width: 250px; right: 100px; height: 132px;"></textarea>
+
+    
+</div>
+   
+
+<div class="col-sm-6" style="padding:20px;">
+
+     Ingresar rut.
   <input type="nombre" name="" class="form-control" placeholder="Rut : 18.250.475-0" style="width: 250px; right: 100px; height: auto;">
 
      Excepción.
@@ -124,14 +134,6 @@ body{
  
  <br>
   <button class="form-control btn btn-success" name="Agregar" style="width: 250px; margin-left: : 100px;">Guardar Excepción</button>
-    
-</div>
-   
-
-<div class="col-sm-6" style="padding:20px;">
-Observación.
-    
-    <textarea class="form-control" style="width: 250px; right: 100px; height: 132px;"></textarea>
 
 </div>
      
